@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DOJ_Interactions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Developed by Michael M.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DOJRP FiveM Community")]
 [assembly: AssemblyProduct("DOJ_Interactions")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

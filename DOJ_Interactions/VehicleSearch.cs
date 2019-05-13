@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DOJ_Interactions
 {
-    public partial class Form1 : Form
+    public partial class VehicleSearch : Form
     {
-        public Form1()
+        public VehicleSearch()
         {
             InitializeComponent();
         }
