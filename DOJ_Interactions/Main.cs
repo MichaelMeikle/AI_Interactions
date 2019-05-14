@@ -14,6 +14,7 @@ namespace DOJ_Interactions
     {
         PersonSearch uc;
         VehicleSearch vs;
+        Home hs;
 
         public Main()
         {
@@ -22,14 +23,35 @@ namespace DOJ_Interactions
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            hs = new Home();
+            hs.Dock = DockStyle.Right;
+            this.Controls.Add(hs);
+            connectionStatusLabel.Text = "Establishing Connection...";
         }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-
             sidePanel.Height = homeButton.Height;
             sidePanel.Top = homeButton.Top;
+
+            //Ensure that other controls closed
+            if (this.Controls.Contains(vs))
+            {
+                this.Controls.Remove(vs);
+            }
+            else if (this.Controls.Contains(uc))
+            {
+                this.Controls.Remove(uc);
+            }
+
+            if (!this.Controls.Contains(hs))
+            {
+                this.Controls.Add(hs);
+            }
+            else
+            {
+                hs.BringToFront();
+            }
         }
 
         private void personButton_Click(object sender, EventArgs e)
@@ -38,13 +60,17 @@ namespace DOJ_Interactions
             sidePanel.Top = personButton.Top;
 
             //Ensure that other controls closed
-            if(vs != null)
+            if(this.Controls.Contains(vs))
             {
                 this.Controls.Remove(vs);
             }
+            else if (this.Controls.Contains(hs))
+            {
+                this.Controls.Remove(hs);
+            }
 
             //New control handle
-            if(uc == null)
+            if (uc == null)
             {
                 //Brings person search item over
                 uc = new PersonSearch();
@@ -67,9 +93,13 @@ namespace DOJ_Interactions
             sidePanel.Top = vehicleButton.Top;
 
             //Ensure that other controls closed
-            if (uc != null)
+            if (this.Controls.Contains(uc))
             {
                 this.Controls.Remove(uc);
+            }
+            else if (this.Controls.Contains(hs))
+            {
+                this.Controls.Remove(hs);
             }
 
             //New control handle
@@ -98,6 +128,18 @@ namespace DOJ_Interactions
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void connectionTime_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.Value == 100)
+            {
+                connectionStatusLabel.Text = "Status: Connected";
+                connectionStatusLabel.ForeColor = Color.FromName("Green");
+                connectionTime.Enabled = false;
+            }
+            else
+                progressBar1.PerformStep();
         }
     }
 }

@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonGenerator.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +76,21 @@
     <Compile Include="PersonSearch.Designer.cs">
       <DependentUpon>PersonSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehicleSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="VehicleSearch.Designer.cs">
       <DependentUpon>VehicleSearch.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

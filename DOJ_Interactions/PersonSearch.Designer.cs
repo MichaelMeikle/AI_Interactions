@@ -42,12 +42,12 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.genderInput = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.raceInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.runButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dobInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +55,11 @@
             this.lastNameInput = new System.Windows.Forms.TextBox();
             this.firstNameInput = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.warrantOutput = new System.Windows.Forms.Label();
+            this.licenseOutput = new System.Windows.Forms.Label();
+            this.citationCountOutput = new System.Windows.Forms.Label();
+            this.occupationOutput = new System.Windows.Forms.Label();
+            this.addressOutput = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,24 +68,30 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(281, 38);
+            this.label7.Location = new System.Drawing.Point(264, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Lookup Output";
+            this.label7.Text = "Information Return";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.addressOutput);
+            this.panel3.Controls.Add(this.occupationOutput);
+            this.panel3.Controls.Add(this.citationCountOutput);
+            this.panel3.Controls.Add(this.licenseOutput);
+            this.panel3.Controls.Add(this.warrantOutput);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(281, 52);
+            this.panel3.Location = new System.Drawing.Point(267, 52);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(334, 242);
+            this.panel3.Size = new System.Drawing.Size(323, 242);
             this.panel3.TabIndex = 16;
             // 
             // label12
@@ -143,6 +154,7 @@
             // raceLabel
             // 
             this.raceLabel.AutoSize = true;
+            this.raceLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.raceLabel.Location = new System.Drawing.Point(7, 55);
             this.raceLabel.Name = "raceLabel";
             this.raceLabel.Size = new System.Drawing.Size(27, 13);
@@ -152,6 +164,7 @@
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
+            this.genderLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.genderLabel.Location = new System.Drawing.Point(7, 40);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(27, 13);
@@ -161,6 +174,7 @@
             // dobLabel
             // 
             this.dobLabel.AutoSize = true;
+            this.dobLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.dobLabel.Location = new System.Drawing.Point(7, 25);
             this.dobLabel.Name = "dobLabel";
             this.dobLabel.Size = new System.Drawing.Size(27, 13);
@@ -170,6 +184,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.nameLabel.Location = new System.Drawing.Point(7, 10);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(27, 13);
@@ -179,7 +194,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Location = new System.Drawing.Point(20, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 15;
@@ -188,29 +203,29 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.genderInput);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.raceInput);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.runButton);
+            this.panel2.Controls.Add(this.clearButton);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.dobInput);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lastNameInput);
             this.panel2.Controls.Add(this.firstNameInput);
-            this.panel2.Location = new System.Drawing.Point(3, 52);
+            this.panel2.Location = new System.Drawing.Point(23, 52);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 242);
             this.panel2.TabIndex = 14;
             // 
-            // textBox1
+            // genderInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.genderInput.Location = new System.Drawing.Point(6, 106);
+            this.genderInput.Name = "genderInput";
+            this.genderInput.Size = new System.Drawing.Size(100, 20);
+            this.genderInput.TabIndex = 6;
             // 
             // label6
             // 
@@ -237,25 +252,27 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Race";
             // 
-            // button2
+            // runButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(102)))), ((int)(((byte)(83)))));
-            this.button2.Location = new System.Drawing.Point(115, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 55);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Run";
-            this.button2.UseVisualStyleBackColor = false;
+            this.runButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(102)))), ((int)(((byte)(83)))));
+            this.runButton.Location = new System.Drawing.Point(115, 180);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(107, 55);
+            this.runButton.TabIndex = 12;
+            this.runButton.Text = "Run";
+            this.runButton.UseVisualStyleBackColor = false;
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
             // 
-            // button1
+            // clearButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.button1.Location = new System.Drawing.Point(2, 180);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 55);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
+            this.clearButton.Location = new System.Drawing.Point(2, 180);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(107, 55);
+            this.clearButton.TabIndex = 11;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // label4
             // 
@@ -314,6 +331,56 @@
             this.panel1.Size = new System.Drawing.Size(618, 35);
             this.panel1.TabIndex = 18;
             // 
+            // warrantOutput
+            // 
+            this.warrantOutput.AutoSize = true;
+            this.warrantOutput.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.warrantOutput.Location = new System.Drawing.Point(92, 93);
+            this.warrantOutput.Name = "warrantOutput";
+            this.warrantOutput.Size = new System.Drawing.Size(27, 13);
+            this.warrantOutput.TabIndex = 6;
+            this.warrantOutput.Text = "N/A";
+            // 
+            // licenseOutput
+            // 
+            this.licenseOutput.AutoSize = true;
+            this.licenseOutput.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.licenseOutput.Location = new System.Drawing.Point(92, 113);
+            this.licenseOutput.Name = "licenseOutput";
+            this.licenseOutput.Size = new System.Drawing.Size(27, 13);
+            this.licenseOutput.TabIndex = 7;
+            this.licenseOutput.Text = "N/A";
+            // 
+            // citationCountOutput
+            // 
+            this.citationCountOutput.AutoSize = true;
+            this.citationCountOutput.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.citationCountOutput.Location = new System.Drawing.Point(86, 134);
+            this.citationCountOutput.Name = "citationCountOutput";
+            this.citationCountOutput.Size = new System.Drawing.Size(27, 13);
+            this.citationCountOutput.TabIndex = 8;
+            this.citationCountOutput.Text = "N/A";
+            // 
+            // occupationOutput
+            // 
+            this.occupationOutput.AutoSize = true;
+            this.occupationOutput.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.occupationOutput.Location = new System.Drawing.Point(75, 153);
+            this.occupationOutput.Name = "occupationOutput";
+            this.occupationOutput.Size = new System.Drawing.Size(27, 13);
+            this.occupationOutput.TabIndex = 9;
+            this.occupationOutput.Text = "N/A";
+            // 
+            // addressOutput
+            // 
+            this.addressOutput.AutoSize = true;
+            this.addressOutput.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addressOutput.Location = new System.Drawing.Point(12, 193);
+            this.addressOutput.Name = "addressOutput";
+            this.addressOutput.Size = new System.Drawing.Size(27, 13);
+            this.addressOutput.TabIndex = 10;
+            this.addressOutput.Text = "N/A";
+            // 
             // PersonSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +393,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "PersonSearch";
             this.Size = new System.Drawing.Size(618, 299);
+            this.Load += new System.EventHandler(this.PersonSearch_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -353,7 +421,7 @@
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox genderInput;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox raceInput;
         private System.Windows.Forms.Label label5;
@@ -364,7 +432,12 @@
         private System.Windows.Forms.TextBox lastNameInput;
         private System.Windows.Forms.TextBox firstNameInput;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Label addressOutput;
+        private System.Windows.Forms.Label occupationOutput;
+        private System.Windows.Forms.Label citationCountOutput;
+        private System.Windows.Forms.Label licenseOutput;
+        private System.Windows.Forms.Label warrantOutput;
     }
 }

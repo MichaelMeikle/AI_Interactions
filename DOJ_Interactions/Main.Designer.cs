@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -37,6 +38,9 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
+            this.connectionStatusLabel = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.connectionTime = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -56,13 +60,13 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(128, 413);
+            this.panel1.Size = new System.Drawing.Size(128, 358);
             this.panel1.TabIndex = 0;
             // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(76)))));
-            this.sidePanel.Location = new System.Drawing.Point(0, 143);
+            this.sidePanel.Location = new System.Drawing.Point(0, 117);
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(10, 72);
             this.sidePanel.TabIndex = 2;
@@ -71,9 +75,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(79, 81);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -82,7 +86,7 @@
             // 
             this.vehicleButton.FlatAppearance.BorderSize = 0;
             this.vehicleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vehicleButton.Location = new System.Drawing.Point(0, 299);
+            this.vehicleButton.Location = new System.Drawing.Point(0, 273);
             this.vehicleButton.Name = "vehicleButton";
             this.vehicleButton.Size = new System.Drawing.Size(128, 72);
             this.vehicleButton.TabIndex = 5;
@@ -94,7 +98,7 @@
             // 
             this.personButton.FlatAppearance.BorderSize = 0;
             this.personButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.personButton.Location = new System.Drawing.Point(0, 221);
+            this.personButton.Location = new System.Drawing.Point(0, 195);
             this.personButton.Name = "personButton";
             this.personButton.Size = new System.Drawing.Size(128, 72);
             this.personButton.TabIndex = 4;
@@ -106,7 +110,7 @@
             // 
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Location = new System.Drawing.Point(0, 143);
+            this.homeButton.Location = new System.Drawing.Point(0, 117);
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(128, 72);
             this.homeButton.TabIndex = 3;
@@ -134,12 +138,37 @@
             this.Title.TabIndex = 0;
             this.Title.Text = "State MDT";
             // 
+            // connectionStatusLabel
+            // 
+            this.connectionStatusLabel.AutoSize = true;
+            this.connectionStatusLabel.Location = new System.Drawing.Point(131, 321);
+            this.connectionStatusLabel.Name = "connectionStatusLabel";
+            this.connectionStatusLabel.Size = new System.Drawing.Size(138, 13);
+            this.connectionStatusLabel.TabIndex = 23;
+            this.connectionStatusLabel.Text = "Status: Awaiting Connecton";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(134, 337);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(135, 14);
+            this.progressBar1.Step = 25;
+            this.progressBar1.TabIndex = 22;
+            // 
+            // connectionTime
+            // 
+            this.connectionTime.Enabled = true;
+            this.connectionTime.Interval = 500;
+            this.connectionTime.Tick += new System.EventHandler(this.connectionTime_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(746, 413);
+            this.ClientSize = new System.Drawing.Size(746, 358);
+            this.Controls.Add(this.connectionStatusLabel);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -151,6 +180,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -164,6 +194,9 @@
         private System.Windows.Forms.Button personButton;
         private System.Windows.Forms.Button vehicleButton;
         private System.Windows.Forms.Panel sidePanel;
+        private System.Windows.Forms.Label connectionStatusLabel;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer connectionTime;
     }
 }
 
