@@ -77,7 +77,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 40);
+            this.label7.Location = new System.Drawing.Point(20, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 13);
             this.label7.TabIndex = 25;
@@ -99,14 +99,15 @@
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.stateRegInput);
             this.panel4.Controls.Add(this.licensePlateInput);
-            this.panel4.Location = new System.Drawing.Point(25, 54);
+            this.panel4.Location = new System.Drawing.Point(23, 54);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(227, 242);
             this.panel4.TabIndex = 24;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // makeInput
             // 
-            this.makeInput.Location = new System.Drawing.Point(7, 99);
+            this.makeInput.Location = new System.Drawing.Point(6, 106);
             this.makeInput.Name = "makeInput";
             this.makeInput.Size = new System.Drawing.Size(100, 20);
             this.makeInput.TabIndex = 6;
@@ -114,7 +115,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 83);
+            this.label8.Location = new System.Drawing.Point(6, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 10;
@@ -122,7 +123,7 @@
             // 
             // modelInput
             // 
-            this.modelInput.Location = new System.Drawing.Point(7, 138);
+            this.modelInput.Location = new System.Drawing.Point(6, 150);
             this.modelInput.Name = "modelInput";
             this.modelInput.Size = new System.Drawing.Size(100, 20);
             this.modelInput.TabIndex = 7;
@@ -130,7 +131,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 122);
+            this.label9.Location = new System.Drawing.Point(6, 134);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 13);
             this.label9.TabIndex = 8;
@@ -159,7 +160,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 45);
+            this.label10.Location = new System.Drawing.Point(6, 51);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 5;
@@ -167,7 +168,7 @@
             // 
             // vinInput
             // 
-            this.vinInput.Location = new System.Drawing.Point(7, 60);
+            this.vinInput.Location = new System.Drawing.Point(6, 66);
             this.vinInput.Name = "vinInput";
             this.vinInput.Size = new System.Drawing.Size(100, 20);
             this.vinInput.TabIndex = 4;
@@ -175,7 +176,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(113, 4);
+            this.label11.Location = new System.Drawing.Point(112, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 3;
@@ -184,7 +185,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 4);
+            this.label12.Location = new System.Drawing.Point(6, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 2;
@@ -192,14 +193,14 @@
             // 
             // stateRegInput
             // 
-            this.stateRegInput.Location = new System.Drawing.Point(113, 22);
+            this.stateRegInput.Location = new System.Drawing.Point(112, 22);
             this.stateRegInput.Name = "stateRegInput";
             this.stateRegInput.Size = new System.Drawing.Size(100, 20);
             this.stateRegInput.TabIndex = 1;
             // 
             // licensePlateInput
             // 
-            this.licensePlateInput.Location = new System.Drawing.Point(7, 22);
+            this.licensePlateInput.Location = new System.Drawing.Point(6, 22);
             this.licensePlateInput.Name = "licensePlateInput";
             this.licensePlateInput.Size = new System.Drawing.Size(100, 20);
             this.licensePlateInput.TabIndex = 0;
@@ -207,7 +208,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(266, 38);
+            this.label13.Location = new System.Drawing.Point(264, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 27;
@@ -225,7 +226,7 @@
             this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(269, 54);
+            this.panel5.Location = new System.Drawing.Point(267, 54);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(323, 242);
             this.panel5.TabIndex = 26;

@@ -26,5 +26,10 @@ namespace DOJ_Interactions
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

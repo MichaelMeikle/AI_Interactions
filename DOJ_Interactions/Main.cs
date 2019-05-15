@@ -15,10 +15,12 @@ namespace DOJ_Interactions
         PersonSearch uc;
         VehicleSearch vs;
         Home hs;
+        bool connectionComplete;
 
         public Main()
         {
             InitializeComponent();
+            connectionComplete = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,14 +50,12 @@ namespace DOJ_Interactions
             {
                 this.Controls.Add(hs);
             }
-            else
-            {
-                hs.BringToFront();
-            }
         }
 
         private void personButton_Click(object sender, EventArgs e)
         {
+            if (!connectionComplete)
+                return;
             sidePanel.Height = personButton.Height;
             sidePanel.Top = personButton.Top;
 
@@ -81,14 +81,12 @@ namespace DOJ_Interactions
             {
                 this.Controls.Add(uc);
             }
-            else
-            {
-                uc.BringToFront();
-            }
         }
 
         private void vehicleButton_Click(object sender, EventArgs e)
         {
+            if (!connectionComplete)
+                return;
             sidePanel.Height = vehicleButton.Height;
             sidePanel.Top = vehicleButton.Top;
 
@@ -114,10 +112,6 @@ namespace DOJ_Interactions
             {
                 this.Controls.Add(vs);
             }
-            else
-            {
-                vs.BringToFront();
-            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -137,6 +131,7 @@ namespace DOJ_Interactions
                 connectionStatusLabel.Text = "Status: Connected";
                 connectionStatusLabel.ForeColor = Color.FromName("Green");
                 connectionTime.Enabled = false;
+                connectionComplete = true;
             }
             else
                 progressBar1.PerformStep();

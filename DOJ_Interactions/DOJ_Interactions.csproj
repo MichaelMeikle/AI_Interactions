@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VehicleGenerator.cs" />
     <Compile Include="PersonGenerator.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>

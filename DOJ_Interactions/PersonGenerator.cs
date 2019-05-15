@@ -10,12 +10,14 @@ namespace DOJ_Interactions
     class PersonGenerator
     {
         //List of previously searched people
-        ArrayList generatedPeople = new ArrayList();
+        private ArrayList generatedPeople;
         //Occupations List
-        ArrayList occupations = new ArrayList();
+        private ArrayList occupations;
 
         public PersonGenerator()
         {
+            generatedPeople = new ArrayList();
+            occupations = new ArrayList();
             occupations.Add("Store Clerk");
             occupations.Add("Assistant");
             occupations.Add("Unknown");

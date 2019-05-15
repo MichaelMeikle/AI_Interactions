@@ -41,6 +41,7 @@
             this.connectionStatusLabel = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.connectionTime = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -161,12 +162,22 @@
             this.connectionTime.Interval = 500;
             this.connectionTime.Tick += new System.EventHandler(this.connectionTime_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(611, 338);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Developed by Michael M.";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(746, 358);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.connectionStatusLabel);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel1);
@@ -197,6 +208,7 @@
         private System.Windows.Forms.Label connectionStatusLabel;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Timer connectionTime;
+        private System.Windows.Forms.Label label1;
     }
 }
 
