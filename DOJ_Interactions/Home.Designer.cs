@@ -34,15 +34,17 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.boloList = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.boloList = new System.Windows.Forms.ListBox();
             this.boloTimer = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +76,17 @@
             this.panel2.Size = new System.Drawing.Size(291, 137);
             this.panel2.TabIndex = 21;
             // 
+            // boloList
+            // 
+            this.boloList.BackColor = System.Drawing.SystemColors.Control;
+            this.boloList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boloList.ForeColor = System.Drawing.Color.Black;
+            this.boloList.FormattingEnabled = true;
+            this.boloList.Location = new System.Drawing.Point(3, 11);
+            this.boloList.Name = "boloList";
+            this.boloList.Size = new System.Drawing.Size(283, 117);
+            this.boloList.TabIndex = 26;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -96,21 +109,11 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.webBrowser1);
             this.panel3.Location = new System.Drawing.Point(8, 159);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(291, 137);
             this.panel3.TabIndex = 24;
-            // 
-            // boloList
-            // 
-            this.boloList.BackColor = System.Drawing.SystemColors.Control;
-            this.boloList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boloList.ForeColor = System.Drawing.Color.Black;
-            this.boloList.FormattingEnabled = true;
-            this.boloList.Location = new System.Drawing.Point(3, 11);
-            this.boloList.Name = "boloList";
-            this.boloList.Size = new System.Drawing.Size(283, 117);
-            this.boloList.TabIndex = 26;
             // 
             // boloTimer
             // 
@@ -139,6 +142,17 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Version 1.0";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(289, 135);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("https://raw.githubusercontent.com/MichaelMeikle/DOJ_Interactions/master/README.md" +
+        "", System.UriKind.Absolute);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +169,7 @@
             this.Size = new System.Drawing.Size(618, 299);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +188,6 @@
         private System.Windows.Forms.Timer boloTimer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
