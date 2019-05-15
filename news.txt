@@ -1,5 +1,3 @@
-Test
-Testing
-Testin
-- Test2
-Length Test Sentence Test 3
+Initial Release
+DOJ Interactions v1.0
+A C# Based AI Lookup App
