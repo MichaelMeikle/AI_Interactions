@@ -20,6 +20,7 @@ namespace DOJ_Interactions
             vehicleFlags.Add("None");
             vehicleFlags.Add("Gang Affiliated");
             vehicleFlags.Add("Registered Firearm");
+            vehicleFlags.Add("Registered Firearm");
             vehicleFlags.Add("RO Suspended License");
             vehicleFlags.Add("RO Expired License");
             vehicleFlags.Add("Previous Evasion");
@@ -27,13 +28,27 @@ namespace DOJ_Interactions
         }
         public Vehicle generateVehicle(string licensePlate, string stateRegistration, string vin, string makeModel)
         {
-            if(vin == null)
+            foreach (Vehicle vehicle in generatedVehicles)
+            {
+                if ((vehicle.LicensePlate.CompareTo(licensePlate) == 0 && vehicle.StateRegistration.CompareTo(stateRegistration) == 0))
+                {
+                    if (vehicle.LicensePlate.CompareTo("N/A") != 0 || vehicle.StateRegistration.CompareTo("N/A") != 0)
+                        return vehicle;
+                }
+                else if (vehicle.Vin.CompareTo(vin) == 0)
+                {
+                    if (vehicle.Vin.CompareTo("N/A") != 0)
+                        return vehicle;
+                }
+            }
+
+            if(vin.Length == 0)
                 vin = generateVIN();
-            if (licensePlate == null)
+            if (licensePlate.Length == 0)
                 licensePlate = "N/A";
-            if (stateRegistration == null)
+            if (stateRegistration.Length == 0)
                 stateRegistration = "N/A";
-            if (makeModel == null)
+            if (makeModel.Length == 0)
                 makeModel = "N/A";
 
 
@@ -45,19 +60,19 @@ namespace DOJ_Interactions
         {
             Random random = new Random();
             int num = random.Next(100);
-            return (num <= 75) ? "Valid" : "Expired";
+            return (num <= 88) ? "Valid" : "Expired";
         }
         private string generateRegistration()
         {
             Random random = new Random();
             int num = random.Next(100);
-            return (num <= 80) ? "Valid" : "Expired";
+            return (num <= 90) ? "Valid" : "Expired";
         }
         private string generateFlag()
         {
             Random random = new Random();
             int num = random.Next(100);
-            return (num <= 65) ? "None" : (string)vehicleFlags[random.Next(vehicleFlags.Count)];
+            return (num <= 85) ? "None" : (string) vehicleFlags[random.Next(vehicleFlags.Count)];
         }
         private string generateVIN()
         {
@@ -65,19 +80,17 @@ namespace DOJ_Interactions
             Random random = new Random();
             for(int i = 0; i < 17; i++)
             {
-                if(random.Next(1) == 0)
-                {
+                if(random.Next(100) <= 50)
                     generatedVin += random.Next(9).ToString();
-                }
                 else
-                {
                     generatedVin += alphabet[random.Next(alphabet.Length)];   
-                }
             }
             return generatedVin;
         }
 
     }
+
+    //Helper Class
     class Vehicle
     {
         public string LicensePlate { get; set; }
@@ -99,4 +112,5 @@ namespace DOJ_Interactions
             this.Flag = flag;
         }
     }
+    
 }

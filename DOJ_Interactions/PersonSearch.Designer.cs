@@ -151,9 +151,9 @@
             this.panel4.Controls.Add(this.genderLabel);
             this.panel4.Controls.Add(this.dobLabel);
             this.panel4.Controls.Add(this.nameLabel);
-            this.panel4.Location = new System.Drawing.Point(4, 4);
+            this.panel4.Location = new System.Drawing.Point(3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(147, 82);
+            this.panel4.Size = new System.Drawing.Size(148, 82);
             this.panel4.TabIndex = 0;
             // 
             // raceLabel

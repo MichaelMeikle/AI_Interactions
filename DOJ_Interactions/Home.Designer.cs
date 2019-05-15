@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -36,7 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.boloList = new System.Windows.Forms.ListBox();
+            this.boloTimer = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,6 +68,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.boloList);
             this.panel2.Location = new System.Drawing.Point(319, 159);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 137);
@@ -94,10 +101,50 @@
             this.panel3.Size = new System.Drawing.Size(291, 137);
             this.panel3.TabIndex = 24;
             // 
+            // boloList
+            // 
+            this.boloList.BackColor = System.Drawing.SystemColors.Control;
+            this.boloList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boloList.ForeColor = System.Drawing.Color.Black;
+            this.boloList.FormattingEnabled = true;
+            this.boloList.Location = new System.Drawing.Point(3, 11);
+            this.boloList.Name = "boloList";
+            this.boloList.Size = new System.Drawing.Size(283, 117);
+            this.boloList.TabIndex = 26;
+            // 
+            // boloTimer
+            // 
+            this.boloTimer.Enabled = true;
+            this.boloTimer.Interval = 300000;
+            this.boloTimer.Tick += new System.EventHandler(this.boloTimer_Tick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(253, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 21);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "DOJ Interations";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(284, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 12);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Version 1.0";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
@@ -107,6 +154,7 @@
             this.Name = "Home";
             this.Size = new System.Drawing.Size(618, 299);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +169,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ListBox boloList;
+        private System.Windows.Forms.Timer boloTimer;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

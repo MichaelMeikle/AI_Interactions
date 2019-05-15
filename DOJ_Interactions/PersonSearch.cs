@@ -34,7 +34,7 @@ namespace DOJ_Interactions
 
         private void runButton_Click(object sender, EventArgs e)
         {
-            resetFlags();
+            resetFields();
             bool incompleteSearch = false;
             if (firstNameInput.Text.CompareTo("") == 0)
             {
@@ -115,7 +115,7 @@ namespace DOJ_Interactions
             occupationOutput.Text = "N/A";
             addressOutput.Text = "N/A";
         }
-        private void resetFlags()
+        private void resetFields()
         {
             warrantOutput.Text = "N/A";
             licenseOutput.Text = "N/A";

@@ -146,6 +146,7 @@
             this.runButton.TabIndex = 12;
             this.runButton.Text = "Run";
             this.runButton.UseVisualStyleBackColor = false;
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
             // 
             // clearButton
             // 
@@ -156,6 +157,7 @@
             this.clearButton.TabIndex = 11;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // label10
             // 
@@ -313,7 +315,7 @@
             // 
             this.makeModelLabel.AutoSize = true;
             this.makeModelLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.makeModelLabel.Location = new System.Drawing.Point(8, 55);
+            this.makeModelLabel.Location = new System.Drawing.Point(7, 55);
             this.makeModelLabel.Name = "makeModelLabel";
             this.makeModelLabel.Size = new System.Drawing.Size(27, 13);
             this.makeModelLabel.TabIndex = 3;
@@ -323,7 +325,7 @@
             // 
             this.vinLabel.AutoSize = true;
             this.vinLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.vinLabel.Location = new System.Drawing.Point(8, 40);
+            this.vinLabel.Location = new System.Drawing.Point(7, 40);
             this.vinLabel.Name = "vinLabel";
             this.vinLabel.Size = new System.Drawing.Size(27, 13);
             this.vinLabel.TabIndex = 2;
@@ -333,7 +335,7 @@
             // 
             this.licensePlateLabel.AutoSize = true;
             this.licensePlateLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.licensePlateLabel.Location = new System.Drawing.Point(8, 25);
+            this.licensePlateLabel.Location = new System.Drawing.Point(7, 25);
             this.licensePlateLabel.Name = "licensePlateLabel";
             this.licensePlateLabel.Size = new System.Drawing.Size(27, 13);
             this.licensePlateLabel.TabIndex = 1;
@@ -343,7 +345,7 @@
             // 
             this.stateRegLabel.AutoSize = true;
             this.stateRegLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.stateRegLabel.Location = new System.Drawing.Point(8, 10);
+            this.stateRegLabel.Location = new System.Drawing.Point(7, 10);
             this.stateRegLabel.Name = "stateRegLabel";
             this.stateRegLabel.Size = new System.Drawing.Size(27, 13);
             this.stateRegLabel.TabIndex = 0;
