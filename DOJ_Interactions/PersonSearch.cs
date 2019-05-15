@@ -34,12 +34,7 @@ namespace DOJ_Interactions
 
         private void runButton_Click(object sender, EventArgs e)
         {
-            warrantOutput.Text = "N/A";
-            licenseOutput.Text = "N/A";
-            citationCountOutput.Text = "N/A";
-            occupationOutput.Text = "N/A";
-            addressOutput.Text = "N/A";
-
+            resetFlags();
             bool incompleteSearch = false;
             if (firstNameInput.Text.CompareTo("") == 0)
             {
@@ -86,6 +81,14 @@ namespace DOJ_Interactions
                 return;
             }
             Person person = personGen.generatePersonObj(fullName, dobLabel.Text);
+            if(person.WarrantStatus.CompareTo("None") != 0)
+            {
+                warrantOutput.ForeColor = Color.FromName("Red");
+            }
+            if(person.LicenseStatus.CompareTo("Valid") != 0)
+            {
+                licenseOutput.ForeColor = Color.FromName("Red");
+            }
             warrantOutput.Text = person.WarrantStatus;
             licenseOutput.Text = person.LicenseStatus;
             citationCountOutput.Text = person.CitationCount.ToString();
@@ -111,6 +114,16 @@ namespace DOJ_Interactions
             citationCountOutput.Text = "N/A";
             occupationOutput.Text = "N/A";
             addressOutput.Text = "N/A";
+        }
+        private void resetFlags()
+        {
+            warrantOutput.Text = "N/A";
+            licenseOutput.Text = "N/A";
+            citationCountOutput.Text = "N/A";
+            occupationOutput.Text = "N/A";
+            addressOutput.Text = "N/A";
+            licenseOutput.ForeColor = Color.FromName("Black");
+            warrantOutput.ForeColor = Color.FromName("Black");
         }
     }
 }

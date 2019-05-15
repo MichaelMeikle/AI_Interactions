@@ -91,7 +91,7 @@ namespace DOJ_Interactions
             int num = gen.Next(100);
             if(num <= 90)
             {
-                return "Clear";
+                return "None";
             }
             else
             {

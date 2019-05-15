@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonSearch));
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,15 +61,17 @@
             this.citationCountOutput = new System.Windows.Forms.Label();
             this.occupationOutput = new System.Windows.Forms.Label();
             this.addressOutput = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(264, 36);
+            this.label7.Location = new System.Drawing.Point(266, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 17;
@@ -78,6 +81,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.addressOutput);
             this.panel3.Controls.Add(this.occupationOutput);
             this.panel3.Controls.Add(this.citationCountOutput);
@@ -89,7 +93,7 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(267, 52);
+            this.panel3.Location = new System.Drawing.Point(269, 54);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 242);
             this.panel3.TabIndex = 16;
@@ -141,6 +145,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.raceLabel);
             this.panel4.Controls.Add(this.genderLabel);
@@ -148,13 +153,13 @@
             this.panel4.Controls.Add(this.nameLabel);
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(173, 82);
+            this.panel4.Size = new System.Drawing.Size(147, 82);
             this.panel4.TabIndex = 0;
             // 
             // raceLabel
             // 
             this.raceLabel.AutoSize = true;
-            this.raceLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.raceLabel.BackColor = System.Drawing.SystemColors.Control;
             this.raceLabel.Location = new System.Drawing.Point(7, 55);
             this.raceLabel.Name = "raceLabel";
             this.raceLabel.Size = new System.Drawing.Size(27, 13);
@@ -164,7 +169,7 @@
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.genderLabel.BackColor = System.Drawing.SystemColors.Control;
             this.genderLabel.Location = new System.Drawing.Point(7, 40);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(27, 13);
@@ -174,7 +179,7 @@
             // dobLabel
             // 
             this.dobLabel.AutoSize = true;
-            this.dobLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dobLabel.BackColor = System.Drawing.SystemColors.Control;
             this.dobLabel.Location = new System.Drawing.Point(7, 25);
             this.dobLabel.Name = "dobLabel";
             this.dobLabel.Size = new System.Drawing.Size(27, 13);
@@ -184,7 +189,7 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.nameLabel.BackColor = System.Drawing.SystemColors.Control;
             this.nameLabel.Location = new System.Drawing.Point(7, 10);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(27, 13);
@@ -194,7 +199,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 38);
+            this.label1.Location = new System.Drawing.Point(22, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 15;
@@ -215,7 +220,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lastNameInput);
             this.panel2.Controls.Add(this.firstNameInput);
-            this.panel2.Location = new System.Drawing.Point(23, 52);
+            this.panel2.Location = new System.Drawing.Point(25, 54);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 242);
             this.panel2.TabIndex = 14;
@@ -255,7 +260,7 @@
             // runButton
             // 
             this.runButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(102)))), ((int)(((byte)(83)))));
-            this.runButton.Location = new System.Drawing.Point(115, 180);
+            this.runButton.Location = new System.Drawing.Point(116, 180);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(107, 55);
             this.runButton.TabIndex = 12;
@@ -266,7 +271,7 @@
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(21)))), ((int)(((byte)(37)))));
-            this.clearButton.Location = new System.Drawing.Point(2, 180);
+            this.clearButton.Location = new System.Drawing.Point(3, 180);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(107, 55);
             this.clearButton.TabIndex = 11;
@@ -381,6 +386,16 @@
             this.addressOutput.TabIndex = 10;
             this.addressOutput.Text = "N/A";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(157, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // PersonSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +415,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +455,6 @@
         private System.Windows.Forms.Label citationCountOutput;
         private System.Windows.Forms.Label licenseOutput;
         private System.Windows.Forms.Label warrantOutput;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
